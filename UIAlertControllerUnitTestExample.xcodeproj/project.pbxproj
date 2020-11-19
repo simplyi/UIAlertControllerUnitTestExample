@@ -19,6 +19,7 @@
 		942FCB2A2565EDC9007D74F1 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB292565EDC9007D74F1 /* MockPresenter.swift */; };
 		942FCB322565F02B007D74F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB312565F02B007D74F1 /* Presenter.swift */; };
 		942FCB3A2565F133007D74F1 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB392565F133007D74F1 /* ViewControllerProtocol.swift */; };
+		942FCB4A2565FC10007D74F1 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB492565FC10007D74F1 /* MockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		942FCB292565EDC9007D74F1 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
 		942FCB312565F02B007D74F1 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		942FCB392565F133007D74F1 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
+		942FCB492565FC10007D74F1 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				942FCAFE2565E7B6007D74F1 /* UIAlertControllerUnitTestExampleTests.swift */,
 				942FCB002565E7B6007D74F1 /* Info.plist */,
 				942FCB292565EDC9007D74F1 /* MockPresenter.swift */,
+				942FCB492565FC10007D74F1 /* MockViewController.swift */,
 			);
 			path = UIAlertControllerUnitTestExampleTests;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942FCB4A2565FC10007D74F1 /* MockViewController.swift in Sources */,
 				942FCB2A2565EDC9007D74F1 /* MockPresenter.swift in Sources */,
 				942FCAFF2565E7B6007D74F1 /* UIAlertControllerUnitTestExampleTests.swift in Sources */,
 			);

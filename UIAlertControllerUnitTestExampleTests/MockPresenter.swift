@@ -22,6 +22,7 @@ class MockPresenter: PresenterProtocol {
     func showAlert() {
         hasAlertBeenPresented = true
         alertPresentedCount += 1
+        self.delegate?.showAlert()
     }
     
     

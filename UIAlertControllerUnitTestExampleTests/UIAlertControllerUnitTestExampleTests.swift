@@ -40,5 +40,27 @@ class UIAlertControllerUnitTestExampleTests: XCTestCase {
         XCTAssertEqual(presenter.alertPresentedCount, 1)
 
     }
+    
+    func testExampleV2() throws {
+        
+        // Arrange
+        let showAlertButton: UIButton = try XCTUnwrap(sut.showAlertButton, "Show alert button does not have a referencing outlet")
+        
+        // Act
+        let showAlertButtonActions = try XCTUnwrap(showAlertButton.actions(forTarget: sut, forControlEvent: .touchUpInside), "Show alert button does not have any actions assigned to it")
+ 
+        let controllerMock = MockViewController()
+        let presenter = MockPresenter(delegate: controllerMock)
+        sut.presenter = presenter
+        sut.showAlertButtonTapped(self)
+        
+        //Assert
+        XCTAssertEqual(showAlertButtonActions.count, 1)
+        XCTAssertTrue(presenter.hasAlertBeenPresented)
+        XCTAssertEqual(presenter.alertPresentedCount, 1)
+ 
+        XCTAssertTrue(controllerMock.hasAlertBeenPresented)
+        XCTAssertEqual(controllerMock.alertPresentedCount, 1)
+    }
 
 }
