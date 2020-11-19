@@ -10,24 +10,35 @@ import XCTest
 
 class UIAlertControllerUnitTestExampleTests: XCTestCase {
 
+    var sut: ViewController!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        sut = storyboard.instantiateViewController(identifier: "ViewController") as ViewController
+        sut.loadViewIfNeeded()
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
-
+    
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        
+        // Arrange
+        let showAlertButton: UIButton = try XCTUnwrap(sut.showAlertButton, "Show alert button does not have a referencing outlet")
+        
+        // Act
+        let showAlertButtonActions = try XCTUnwrap(showAlertButton.actions(forTarget: sut, forControlEvent: .touchUpInside), "Show alert button does not have any actions assigned to it")
+ 
+        let presenter = MockPresenter(delegate: sut)
+        sut.presenter = presenter
+        sut.showAlertButtonTapped(self)
+        
+        //Assert
+        XCTAssertEqual(showAlertButtonActions.count, 1)
+        XCTAssertTrue(presenter.hasAlertBeenPresented)
+        XCTAssertEqual(presenter.alertPresentedCount, 1)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
 
 }

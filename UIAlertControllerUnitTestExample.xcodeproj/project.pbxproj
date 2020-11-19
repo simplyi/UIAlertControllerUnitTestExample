@@ -15,6 +15,10 @@
 		942FCAF42565E7B6007D74F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942FCAF22565E7B6007D74F1 /* LaunchScreen.storyboard */; };
 		942FCAFF2565E7B6007D74F1 /* UIAlertControllerUnitTestExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCAFE2565E7B6007D74F1 /* UIAlertControllerUnitTestExampleTests.swift */; };
 		942FCB0A2565E7B6007D74F1 /* UIAlertControllerUnitTestExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB092565E7B6007D74F1 /* UIAlertControllerUnitTestExampleUITests.swift */; };
+		942FCB1D2565ED14007D74F1 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB1C2565ED14007D74F1 /* PresenterProtocol.swift */; };
+		942FCB2A2565EDC9007D74F1 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB292565EDC9007D74F1 /* MockPresenter.swift */; };
+		942FCB322565F02B007D74F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB312565F02B007D74F1 /* Presenter.swift */; };
+		942FCB3A2565F133007D74F1 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FCB392565F133007D74F1 /* ViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		942FCB052565E7B6007D74F1 /* UIAlertControllerUnitTestExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIAlertControllerUnitTestExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		942FCB092565E7B6007D74F1 /* UIAlertControllerUnitTestExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerUnitTestExampleUITests.swift; sourceTree = "<group>"; };
 		942FCB0B2565E7B6007D74F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		942FCB1C2565ED14007D74F1 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
+		942FCB292565EDC9007D74F1 /* MockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
+		942FCB312565F02B007D74F1 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		942FCB392565F133007D74F1 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,9 @@
 				942FCAF02565E7B6007D74F1 /* Assets.xcassets */,
 				942FCAF22565E7B6007D74F1 /* LaunchScreen.storyboard */,
 				942FCAF52565E7B6007D74F1 /* Info.plist */,
+				942FCB1C2565ED14007D74F1 /* PresenterProtocol.swift */,
+				942FCB312565F02B007D74F1 /* Presenter.swift */,
+				942FCB392565F133007D74F1 /* ViewControllerProtocol.swift */,
 			);
 			path = UIAlertControllerUnitTestExample;
 			sourceTree = "<group>";
@@ -115,6 +126,7 @@
 			children = (
 				942FCAFE2565E7B6007D74F1 /* UIAlertControllerUnitTestExampleTests.swift */,
 				942FCB002565E7B6007D74F1 /* Info.plist */,
+				942FCB292565EDC9007D74F1 /* MockPresenter.swift */,
 			);
 			path = UIAlertControllerUnitTestExampleTests;
 			sourceTree = "<group>";
@@ -258,9 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942FCB3A2565F133007D74F1 /* ViewControllerProtocol.swift in Sources */,
 				942FCAEC2565E7B4007D74F1 /* ViewController.swift in Sources */,
 				942FCAE82565E7B4007D74F1 /* AppDelegate.swift in Sources */,
+				942FCB1D2565ED14007D74F1 /* PresenterProtocol.swift in Sources */,
 				942FCAEA2565E7B4007D74F1 /* SceneDelegate.swift in Sources */,
+				942FCB322565F02B007D74F1 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942FCB2A2565EDC9007D74F1 /* MockPresenter.swift in Sources */,
 				942FCAFF2565E7B6007D74F1 /* UIAlertControllerUnitTestExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
